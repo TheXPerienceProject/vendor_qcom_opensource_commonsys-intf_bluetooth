@@ -37,6 +37,7 @@ PRODUCT_PACKAGES += libfmjni
 PRODUCT_PACKAGES += fm_helium
 PRODUCT_PACKAGES += libfm-hci
 PRODUCT_PACKAGES += FM2
+PRODUCT_PACKAGES += qcom.fmradio
 PRODUCT_BOOT_JARS += qcom.fmradio
 # system prop for fm
 PRODUCT_PROPERTY_OVERRIDES += vendor.hw.fm.init=0
@@ -55,11 +56,5 @@ PRODUCT_PACKAGES += com.quicinc.wbcservice.xml
 PRODUCT_PACKAGES += libwbc_jni
 PRODUCT_PACKAGES += com.quicinc.wipoweragent
 PRODUCT_PACKAGES += com.quicinc.wbcserviceapp
-#WIPOWER, a4wp
-PRODUCT_PACKAGES += libwipower_jni
-PRODUCT_PACKAGES += android.wipower
-PRODUCT_PACKAGES += android.wipower.xml
-PRODUCT_PACKAGES += a4wpservice
-PRODUCT_PACKAGES += wipowerservice
 endif #TARGET_FWK_SUPPORTS_FULL_VALUEADDS
 endif #BOARD_USES_WIPOWER
