@@ -10,15 +10,17 @@ ifeq ($(BOARD_HAVE_BLUETOOTH_QCOM),true)
 PRODUCT_PACKAGES += Bluetooth
 
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS), true)
+ifneq ($(TARGET_BOARD_PLATFORM)), sdm660 )
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := vendor/qcom/opensource/commonsys-intf/bluetooth/build/qva/config
+endif
 PRODUCT_PACKAGES += libbluetooth_qti
 PRODUCT_PACKAGES += bt_logger
 PRODUCT_PACKAGES += libbt-logClient
 PRODUCT_PACKAGES += BluetoothExt
 PRODUCT_PACKAGES += libbtconfigstore
 # BT Related Test app & Tools
-PRODUCT_PACKAGES_DEBUG += BATestApp
-PRODUCT_PACKAGES_DEBUG += BTTestApp
+#PRODUCT_PACKAGES_DEBUG += BATestApp
+#PRODUCT_PACKAGES_DEBUG += BTTestApp
 PRODUCT_PACKAGES_DEBUG += btsnoop
 PRODUCT_PACKAGES_DEBUG += gatt_tool_qti_internal
 PRODUCT_PACKAGES_DEBUG += l2test_ertm
