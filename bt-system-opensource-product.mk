@@ -35,7 +35,7 @@ endif #TARGET_BOARD_TYPE
 
 ifeq ($(TARGET_FWK_SUPPORTS_FULL_VALUEADDS), true)
 ifneq ($(TARGET_BOARD_TYPE),auto)
-TARGET_USE_QTI_BT_STACK := true
+TARGET_USE_QTI_BT_STACK ?= true
 endif
 
 ifeq ($(TARGET_USE_QTI_BT_STACK),true)
